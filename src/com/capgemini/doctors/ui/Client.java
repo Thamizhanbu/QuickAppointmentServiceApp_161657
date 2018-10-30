@@ -10,7 +10,7 @@ import com.capgemini.doctors.service.ImpDoctorAppointmentService;
 public class Client {
 	Scanner sc = new Scanner(System.in);
 	IDoctorAppointmentService ids = new ImpDoctorAppointmentService();
-	int appointmentid =(int) Math.random()*90000+1001;
+	int appointmentid =(int)Math.random()*((1500-1000)+1)+1001;
 	
 	//Displays the menu 
 	public void displayMenu() {
@@ -65,9 +65,9 @@ public class Client {
 		System.out.println("Enter your Appointment ID: ");
 		int appointmentId = sc.nextInt();
 		try {
-			ids.getDoctoreAppointmentDetails(appointmentId);
+			;
 			//System.out.println(da);
-			System.out.println("Patient Name: "+da.getPatientName());
+			System.out.println("Patient Name: "+ids.getDoctoreAppointmentDetails(appointmentId).getPatientName());
 			System.out.println("Appointment Status: APPROVED");
 		}
 		catch(InvalidInputExcetion e) {

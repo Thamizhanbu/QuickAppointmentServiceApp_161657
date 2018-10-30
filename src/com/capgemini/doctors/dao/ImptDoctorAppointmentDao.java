@@ -14,8 +14,9 @@ public class ImptDoctorAppointmentDao implements IDoctorAppointmentDao {
 	@Override
 	public int addDoctorAppointmentDetails(int appointmentId,DoctorAppointment doctorAppointment) {
 		// TODO Auto-generated method stub
-		appointments.put(appointmentId, doctorAppointment);
-		return appointmentId;
+		appointments.put(doctorAppointment.getAppointmentId(),doctorAppointment);
+		System.out.println(appointments.get(appointmentId));
+		return doctorAppointment.getAppointmentId();
 	}
 
 	//Return the status of appointment
@@ -23,7 +24,7 @@ public class ImptDoctorAppointmentDao implements IDoctorAppointmentDao {
 	public DoctorAppointment getAppointmentDetails(int appointmentId) {
 		// TODO Auto-generated method stub
 		DoctorAppointment result =null;
-		if(appointments.containsKey(appointmentId)) {
+		/*if(appointments.containsKey(appointmentId)) {
 			for(DoctorAppointment da:appointments.values()) {
 				if(da.getAppointmentId()==appointmentId) {
 				result = da;
@@ -34,6 +35,16 @@ public class ImptDoctorAppointmentDao implements IDoctorAppointmentDao {
 			else {
 					throw new InvalidInputExcetion("DISAPPROVED");
 				}
-	}
+	}*/
+		 for (DoctorAppointment da : appointments.values()) {
+	            
+	            result =da;
+	            System.out.println(da);
+		}
+		 
+		 return result;
+		 //System.out.println(result);
+	       
+}
 }
 
