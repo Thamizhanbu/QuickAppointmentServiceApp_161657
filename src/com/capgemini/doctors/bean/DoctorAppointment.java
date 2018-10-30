@@ -12,7 +12,7 @@ public class DoctorAppointment {
 	private int age;
 	private String problemName;
 	private String doctorName;
-	private String appointmentStatus;
+	private String appointmentStatus = "DISAPPROVED";
 	
 	public DoctorAppointment(){
 		
