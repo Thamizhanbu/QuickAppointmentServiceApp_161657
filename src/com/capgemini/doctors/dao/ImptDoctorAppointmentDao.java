@@ -38,6 +38,7 @@ public class ImptDoctorAppointmentDao implements IDoctorAppointmentDao {
 		}
 		else
 		{
+			doctorAppointment.setDoctorName(null);
 			throw new InvalidInputExcetion("Invalid Problem Name");
 		}
 		
